@@ -1,0 +1,220 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="liu_wei">
+        <item>力量</item>
+        <item>技巧</item>
+        <item>敏捷</item>
+        <item>体质</item>
+        <item>感知</item>
+        <item>意志</item>
+    </string-array>
+    <string-array name="liu_wei_l">
+        <item>SSS</item>
+        <item>SS</item>
+        <item>S</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+    <string-array name="qianLi_z">
+        <item>1.208</item>
+        <item>1.107</item>
+        <item>0.806</item>
+        <item>0.605</item>
+        <item>0.404</item>
+        <item>0.283</item>
+        <item>0.152</item>
+        <item>0.051</item>
+    </string-array>
+    <string-array name="dengJi">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="profession_all">
+        <!--1--><item>新兵</item>
+
+        <!--2--><item>见习骑兵</item>
+        <!--3--><item>猎人</item>
+        <!--4--><item>轻步兵</item>
+        <!--5--><item>重步兵</item>
+        <!--6--><item>自学巫师</item>
+
+        <!--7--><item>轻骑兵</item>
+        <!--8--><item>重骑兵</item>
+        <!--9--><item>弓箭手</item>
+        <!--10--><item>弩手</item>
+        <!--11--><item>勇士</item>
+        <!--12--><item>斥候</item>
+        <!--13--><item>方阵步兵</item>
+        <!--14--><item>重甲枪兵</item>
+        <!--15--><item>德鲁伊</item>
+        <!--16--><item>牧师</item>
+
+        <!--17--><item>皇家骑兵</item>
+        <!--18--><item>掠袭骑兵</item>
+        <!--19--><item>重装骑兵</item>
+        <!--20--><item>统御骑兵</item>
+        <!--21--><item>恐惧骑兵</item>
+        <!--22--><item>长弓手</item>
+        <!--23--><item>游侠</item>
+        <!--24--><item>盾弩手</item>
+        <!--25--><item>重弩手</item>
+        <!--26--><item>狂战士</item>
+        <!--27--><item>大剑士</item>
+        <!--28--><item>刺客</item>
+        <!--29--><item>剑圣</item>
+        <!--30--><item>决斗士</item>
+        <!--31--><item>暗影刀客</item>
+        <!--32--><item>王室禁卫</item>
+        <!--33--><item>铁甲军士</item>
+        <!--34--><item>重甲僧侣</item>
+        <!--35--><item>圣堂铁卫</item>
+        <!--36--><item>大德鲁伊</item>
+        <!--37--><item>主教</item>
+        <!--38--><item>炼金术士</item>
+        <!--39--><item>吟游诗人</item>
+        <!--40--><item>帝国密使</item>
+    </string-array>
+    <string-array name="profession_zhuanZhi">
+        <item>默认级别</item>
+        <item>一转</item>
+        <item>二转</item>
+        <item>三转</item>
+    </string-array>
+    <string-array name="profession_zhuanZhi1">
+        <item>见习骑兵</item>
+        <item>猎人</item>
+        <item>轻步兵</item>
+        <item>重步兵</item>
+        <item>自学巫师</item>
+    </string-array>
+    <string-array name="profession_zhuanZhi2">
+        <item>轻骑兵</item><item>重骑兵</item>
+        <item>弓箭手</item><item>弩手</item>
+        <item>勇士</item><item>斥候</item>
+        <item>方阵步兵</item><item>重甲枪兵</item>
+        <item>德鲁伊</item><item>牧师</item>
+    </string-array>
+    <string-array name="profession_zhuanZhi3">
+        <item>皇家骑兵</item><item>掠袭骑兵</item><item>重装骑兵</item><item>统御骑兵</item><item>恐惧骑兵</item>
+        <item>长弓手</item><item>游侠</item><item>盾弩手</item><item>重弩手</item>
+        <item>狂战士</item><item>大剑士</item><item>刺客</item><item>剑圣</item><item>决斗士</item><item>暗影刀客</item>
+        <item>王室禁卫</item><item>铁甲军士</item><item>重甲僧侣</item><item>圣堂铁卫</item>
+        <item>大德鲁伊</item><item>主教</item><item>炼金术士</item><item>吟游诗人</item><item>帝国密使</item>
+    </string-array>
+    <string-array name="profession_bingZhong">
+        <item>默认兵种</item>
+        <item>骑兵</item>
+        <item>弓兵</item>
+        <item>步兵</item>
+        <item>重步兵</item>
+        <item>特殊</item>
+    </string-array>
+    <string-array name="profession_qiBing">
+        <item>见习骑兵</item>
+        <item>轻骑兵</item>
+        <item>重骑兵</item>
+        <item>皇家骑兵</item>
+        <item>掠袭骑兵</item>
+        <item>重装骑兵</item>
+        <item>统御骑兵</item>
+        <item>恐惧骑兵</item>
+    </string-array>
+    <string-array name="profession_qiBing3">
+        <item>皇家骑兵</item>
+        <item>掠袭骑兵</item>
+        <item>重装骑兵</item>
+        <item>统御骑兵</item>
+        <item>恐惧骑兵</item>
+    </string-array>
+    <string-array name="profession_qiBing2">
+        <item>轻骑兵</item>
+        <item>重骑兵</item>
+    </string-array>
+    <string-array name="profession_qiBing1">
+        <item>见习骑兵</item>
+    </string-array>
+    <string-array name="profession_gongBing">
+        <item>猎人</item>
+        <item>弓箭手</item>
+        <item>弩手</item>
+        <item>长弓手</item>
+        <item>游侠</item>
+        <item>盾弩手</item>
+        <item>重弩手</item>
+    </string-array>
+    <string-array name="profession_gongBing3">
+        <item>长弓手</item>
+        <item>游侠</item>
+        <item>盾弩手</item>
+        <item>重弩手</item>
+    </string-array>
+    <string-array name="profession_gongBing2">
+        <item>弓箭手</item>
+        <item>弩手</item>
+    </string-array>
+    <string-array name="profession_gongBing1">
+        <item>猎人</item>
+    </string-array>
+    <string-array name="profession_buBing">
+        <item>轻步兵</item>
+        <item>勇士</item><item>斥候</item>
+        <item>狂战士</item><item>大剑士</item><item>刺客</item><item>剑圣</item><item>决斗士</item><item>暗影刀客</item>
+    </string-array>
+    <string-array name="profession_buBing1">
+        <item>轻步兵</item>
+    </string-array>
+    <string-array name="profession_buBing2">
+        <item>勇士</item><item>斥候</item>
+    </string-array>
+    <string-array name="profession_buBing3">
+        <item>狂战士</item><item>大剑士</item><item>刺客</item><item>剑圣</item><item>决斗士</item><item>暗影刀客</item>
+    </string-array>
+    <string-array name="profession_zhongBuBing">
+        <item>重步兵</item>
+        <item>方阵步兵</item><item>重甲枪兵</item>
+        <item>王室禁卫</item><item>铁甲军士</item><item>重甲僧侣</item><item>圣堂铁卫</item>
+    </string-array>
+    <string-array name="profession_zhongBuBing3">
+        <item>王室禁卫</item><item>铁甲军士</item><item>重甲僧侣</item><item>圣堂铁卫</item>
+    </string-array>
+    <string-array name="profession_zhongBuBing2">
+        <item>方阵步兵</item><item>重甲枪兵</item>
+    </string-array>
+    <string-array name="profession_zhongBuBing1">
+        <item>重步兵</item>
+    </string-array>
+    <string-array name="profession_teShu">
+        <item>自学巫师</item>
+        <item>德鲁伊</item><item>牧师</item>
+        <item>大德鲁伊</item><item>主教</item><item>炼金术士</item><item>吟游诗人</item><item>帝国密使</item>
+    </string-array>
+    <string-array name="profession_teShu1">
+        <item>自学巫师</item>
+    </string-array>
+    <string-array name="profession_teShu2">
+        <item>德鲁伊</item><item>牧师</item>
+    </string-array>
+    <string-array name="profession_teShu3">
+        <item>大德鲁伊</item><item>主教</item><item>炼金术士</item><item>吟游诗人</item><item>帝国密使</item>
+    </string-array>
+</resources>

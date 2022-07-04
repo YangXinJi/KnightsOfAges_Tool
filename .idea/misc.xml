@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.33" />
+        <entry key="../../.gradle/caches/transforms-3/b7cdc5c1453a7e1579f6238be628b37b/transformed/appcompat-1.3.0/res/drawable/abc_spinner_textfield_background_material.xml" value="0.279" />
+        <entry key="../../.gradle/caches/transforms-3/b7cdc5c1453a7e1579f6238be628b37b/transformed/appcompat-1.3.0/res/layout/support_simple_spinner_dropdown_item.xml" value="0.3188405797101449" />
+        <entry key="..\:/AndroidStudioProjects/KingOfTool/app/src/main/res/layout/card_sx.xml" value="0.2578125" />
+        <entry key="..\:/AndroidStudioProjects/KingOfTool/app/src/main/res/layout/fragment_cjb.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProjects/KingOfTool/app/src/main/res/layout/spinner_ql.xml" value="0.2578125" />
+        <entry key="..\:/AndroidStudioProjects/KingOfTool/app/src/main/res/layout/spinner_zy.xml" value="0.2578125" />
+        <entry key="..\:/AndroidStudioProjects/KingOfTool/app/src/main/res/layout/spinner_zydj.xml" value="0.2578125" />
+        <entry key="app/src/main/res/drawable-anydpi/about.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-anydpi/home.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-anydpi/settings.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-anydpi/tag.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-anydpi/tag_night.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-night/about.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-night/home.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-night/settings.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-night/tag.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/popupwindow.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/selector_for_custom_spinner.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/shape_for_custom_spinner.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/side_bg.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/side_textcolor.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/toolbar_shadow.xml" value="0.222" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/card_sx.xml" value="0.3188405797101449" />
+        <entry key="app/src/main/res/layout/divider.xml" value="0.3188405797101449" />
+        <entry key="app/src/main/res/layout/fragment_cjb.xml" value="0.34739583333333335" />
+        <entry key="app/src/main/res/layout/fragment_cz.xml" value="0.34739583333333335" />
+        <entry key="app/src/main/res/layout/fragment_ql.xml" value="0.34739583333333335" />
+        <entry key="app/src/main/res/layout/navigation.xml" value="0.2210144927536232" />
+        <entry key="app/src/main/res/layout/spinner.xml" value="0.3188405797101449" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.3188405797101449" />
+        <entry key="app/src/main/res/layout/spinner_item_dropdown.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/spinner_ql.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/spinner_zy.xml" value="0.20989583333333334" />
+        <entry key="app/src/main/res/layout/sx_view.xml" value="0.3188405797101449" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.2210144927536232" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

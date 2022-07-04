@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="toolbar_minHeight">50dp</dimen>
+    <dimen name="panel_margin">10dp</dimen>
+    <dimen name="panel_padding">10dp</dimen>
+    <dimen name="card_padding">5dp</dimen>
+    <dimen name="card_margin">20dp</dimen>
+    <dimen name="spinner_height">60dp</dimen>
+    <dimen name="edittext_height">60dp</dimen>
+    <dimen name="divider_margin">10dp</dimen>
+    <dimen name="view_margin">5dp</dimen>
+    <dimen name="Title_margin">15dp</dimen>
+    <dimen name="radius">10dp</dimen>
+    <dimen name="elevation">3dp</dimen>
+
+</resources>

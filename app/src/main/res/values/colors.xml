@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/md_deep_purple_A700</color>
+    <color name="colorPrimary_night">@color/md_deep_purple_A700</color>
+    <color name="dividerColor">@color/material_drawer_divider</color>
+    <color name="card_bg">#F0f0f0</color>
+    <color name="card1_bg">@color/cardview_light_background</color>
+    <color name="spinner_popBg">@color/white</color>
+    <color name="toolbar_text">#FFFFFFFF</color>
+    <color name="header_text">#FFFFFFFF</color>
+    <color name="sliderBackgroundColor">#FFFFFFFF</color>
+    <color name="slider_textColor">@color/black_gray3</color>
+    <color name="slider_select_textColor">@color/white</color>
+    <color name="slider_select_Color">@color/colorPrimary_night</color>
+    <color name="hint_color">@color/colorPrimary_night</color>
+
+
+
+    <color name="white_gray1">#eeeeee</color>
+    <color name="white_gray2">#dddddd</color>
+    <color name="white_gray3">#cccccc</color>
+    <color name="white_gray4">#bbbbbb</color>
+    <color name="white_gray5">#aaaaaa</color>
+    <color name="black_gray5">#555555</color>
+    <color name="black_gray4">#444444</color>
+    <color name="black_gray3">#333333</color>
+    <color name="black_gray2">#222222</color>
+    <color name="black_gray1">#111111</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

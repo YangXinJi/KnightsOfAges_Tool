@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+                <Spinner
+                    android:id="@+id/sx"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_margin="@dimen/view_margin" />
+                <Spinner
+                    android:id="@+id/sxLevel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_margin="@dimen/view_margin" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="@string/shuXingZhi"
+                    app:hintTextColor="@color/hint_color"
+                    android:layout_margin="@dimen/view_margin">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_sx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="18sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+</LinearLayout>

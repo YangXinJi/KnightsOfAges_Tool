@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">诸神助手</string>
+    <string name="drawer_item_home">主页</string>
+    <string name="drawer_item_settings">设置</string>
+    <string name="drawer_item_cjb">传家宝</string>
+    <string name="drawer_item_cz">成长</string>
+    <string name="drawer_item_ql">潜力</string>
+    <string name="drawer_item_about">关于</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="shuXingZhi">属性值</string>
+    <string name="dengJi">等级</string>
+    <string name="zhuZhiYe">主职业</string>
+    <string name="zhiYeDengJi">职业与等级</string>
+    <string name="renWuShuXing">人物属性</string>
+</resources>
