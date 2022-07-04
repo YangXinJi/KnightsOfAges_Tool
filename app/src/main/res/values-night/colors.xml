@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/black_gray2</color>
+    <color name="colorPrimary_night">@color/md_deep_purple_300</color>
+    <color name="dividerColor">@color/material_drawer_dark_divider</color>
+    <color name="card_bg">@color/cardview_dark_background</color>
+    <color name="card1_bg">@color/black_gray1</color>
+    <color name="spinner_popBg">@color/black</color>
+    <color name="toolbar_text">@color/white_gray5</color>
+    <color name="header_text">@color/white_gray5</color>
+    <color name="sliderBackgroundColor">@color/black_gray1</color>
+    <color name="slider_textColor">@color/white_gray5</color>
+    <color name="slider_select_textColor">#FFFFFFFF</color>
+    <color name="slider_select_Color">@color/colorPrimary_night</color>
+
+
+</resources>

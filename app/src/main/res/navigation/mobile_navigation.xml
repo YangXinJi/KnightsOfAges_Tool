@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.huihuijiang.ui.mainUI.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/CJBFragment"
+        android:name="com.huihuijiang.ui.mainUI.CJBFragment"
+        android:label="fragment_cjb"
+        tools:layout="@layout/fragment_cjb" />
+    <fragment
+        android:id="@+id/CZFragment"
+        android:name="com.huihuijiang.ui.mainUI.CZFragment"
+        android:label="fragment_cz"
+        tools:layout="@layout/fragment_cz" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.huihuijiang.ui.mainUI.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/QLFragment"
+        android:name="com.huihuijiang.ui.mainUI.QLFragment"
+        android:label="fragment_ql"
+        tools:layout="@layout/fragment_ql" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.huihuijiang.ui.mainUI.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
