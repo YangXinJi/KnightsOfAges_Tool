@@ -78,20 +78,7 @@ public class CJBFragment extends Fragment {
         viewStyle.setSpinnerStyle(binding.mainZYDJ.zyZhiYe);
         binding.mainZYDJ.zyLevel.setOnItemSelectedListener(new SpinnerZYClick_A(getActivity(),binding.mainZYDJ.zyLevel,binding.mainZYDJ.zyBingZhong,binding.mainZYDJ.zyZhiYe));
         binding.mainZYDJ.zyBingZhong.setOnItemSelectedListener(new SpinnerZYClick_A(getActivity(),binding.mainZYDJ.zyLevel,binding.mainZYDJ.zyBingZhong,binding.mainZYDJ.zyZhiYe));
-        binding.mainZYDJ.zyZhiYe.setOnItemSelectedListener(new SpinnerZYClick_B
-
-
-
-
-
-
-
-
-
-
-
-
-                (binding.mainZYDJ.zyZhiYe));
+        binding.mainZYDJ.zyZhiYe.setOnItemSelectedListener(new SpinnerZYClick_B(binding.mainZYDJ.zyZhiYe));
         return binding.getRoot();
     }
 
