@@ -14,24 +14,13 @@ import java.util.List;
 
 public class CJBViewModel extends ViewModel {
 
-    private MutableLiveData<ArrayAdapter<String>> spinner;
-    private MutableLiveData<ArrayAdapter<String>> spinner_sx;
-    private MutableLiveData<Integer> spinner_position;
-    private MutableLiveData<Integer> spinner_sx_position;
-    private MutableLiveData<List<Double>> spinnerDataMutableLiveData;
-    private MutableLiveData<ArrayAdapter<String>> spinner_mainZYDJ_zyLevel;
-    private MutableLiveData<ArrayAdapter<String>> spinner_mainZYDJ_zyBingZhong;
-    private MutableLiveData<ArrayAdapter<String>> mainZYDJ_zyZhiYe;
-    private MutableLiveData<Integer> spinner_mainZYDJ_zyLevel_position;
-    private MutableLiveData<Integer> spinner_mainZYDJ_zyBingZhong_position;
-    private MutableLiveData<Integer> spinner_mainZYDJ_zyZhiYe_position;
     @SuppressLint("StaticFieldLeak")
     private Context context;
-
     public void setContext(Context context) {
         this.context = context;
     }
 
+    private MutableLiveData<List<Double>> spinnerDataMutableLiveData;
     public void setSpinnerDataMutableLiveData(int position,double n){
         if (spinnerDataMutableLiveData==null){
             loadSpinnerDataMutableLiveData();
@@ -55,6 +44,7 @@ public class CJBViewModel extends ViewModel {
         return spinnerDataMutableLiveData.getValue();
     }
 
+    private MutableLiveData<Integer> spinner_position;
     public int getSpinner_position() {
         if (spinner_position==null){
             spinner_position=new MutableLiveData<>();
@@ -66,6 +56,7 @@ public class CJBViewModel extends ViewModel {
         this.spinner_position.setValue(spinner_position);
     }
 
+    private MutableLiveData<Integer> spinner_sx_position;
     public int getSpinner_sx_position() {
         if (spinner_sx_position==null){
             spinner_sx_position=new MutableLiveData<>();
@@ -77,6 +68,31 @@ public class CJBViewModel extends ViewModel {
         this.spinner_sx_position.setValue(spinner_sx_position);
     }
 
+    private MutableLiveData<Integer> spinner_mainZYDJ_zyLevel_position;
+    public int getSpinner_mainZYDJ_zyLevel_position() {
+        if (spinner_mainZYDJ_zyLevel_position==null){
+            spinner_mainZYDJ_zyLevel_position=new MutableLiveData<>();
+            spinner_mainZYDJ_zyLevel_position.setValue(0);
+        }
+        return spinner_mainZYDJ_zyLevel_position.getValue();
+    }
+    public void setSpinner_mainZYDJ_zyLevel_position(int spinner_sx_position) {
+        this.spinner_mainZYDJ_zyLevel_position.setValue(spinner_sx_position);
+    }
+
+    private MutableLiveData<Integer> spinner_mainZYDJ_zyBingZhong_position;
+    public int getSpinner_mainZYDJ_zyBingZhong_position() {
+        if (spinner_mainZYDJ_zyBingZhong_position==null){
+            spinner_mainZYDJ_zyBingZhong_position=new MutableLiveData<>();
+            spinner_mainZYDJ_zyBingZhong_position.setValue(0);
+        }
+        return spinner_mainZYDJ_zyLevel_position.getValue();
+    }
+    public void setSpinner_mainZYDJ_zyBingZhong_position(int spinner_sx_position) {
+        this.spinner_mainZYDJ_zyBingZhong_position.setValue(spinner_sx_position);
+    }
+
+    private MutableLiveData<ArrayAdapter<String>> spinner;
     public ArrayAdapter<String> getSpinner(){
         if (spinner == null){
             spinner = new MutableLiveData<>();
@@ -95,6 +111,7 @@ public class CJBViewModel extends ViewModel {
         spinner.setValue(data);
     }
 
+    private MutableLiveData<ArrayAdapter<String>> spinner_sx;
     public ArrayAdapter<String> getSpinner_sx() {
         if (spinner_sx == null){
             spinner_sx = new MutableLiveData<>();
@@ -113,6 +130,7 @@ public class CJBViewModel extends ViewModel {
         spinner_sx.setValue(data);
     }
 
+    private MutableLiveData<ArrayAdapter<String>> spinner_mainZYDJ_zyLevel;
     public ArrayAdapter<String> getSpinner_mainZYDJ_zyLevel(){
         if (spinner_mainZYDJ_zyLevel == null){
             spinner_mainZYDJ_zyLevel = new MutableLiveData<>();
@@ -131,6 +149,7 @@ public class CJBViewModel extends ViewModel {
         spinner_mainZYDJ_zyLevel.setValue(data);
     }
 
+    private MutableLiveData<ArrayAdapter<String>> spinner_mainZYDJ_zyBingZhong;
     public ArrayAdapter<String> getSpinner_mainZYDJ_zyBingZhong(){
         if (spinner_mainZYDJ_zyBingZhong == null){
             spinner_mainZYDJ_zyBingZhong = new MutableLiveData<>();

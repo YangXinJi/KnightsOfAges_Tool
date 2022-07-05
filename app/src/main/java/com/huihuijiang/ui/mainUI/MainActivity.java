@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint({"UseCompatLoadingForDrawables", "ResourceAsColor", "ResourceType"})
     private void initToolbar(){
 
-        ProfileSettingDrawerItem mainProfile=new ProfileSettingDrawerItem()
+        ProfileSettingDrawerItem mainProfile = new ProfileSettingDrawerItem()
                 .withName("诸神助手")
                 .withIdentifier(0)
                 .withTag(0)
                 .withIcon(getResources().getDrawable(R.drawable.ic_launcher_foreground))
                 .withSelectedColorRes(R.color.slider_select_Color)
                 .withTextColorRes(R.color.white);
-        ProfileSettingDrawerItem adminProfile=new ProfileSettingDrawerItem()
+        ProfileSettingDrawerItem adminProfile = new ProfileSettingDrawerItem()
                 .withName("资深司机")
                 .withIdentifier(1)
                 .withTag(1)
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 .withTextColorRes(R.color.black_gray4);
         //侧边栏头部账号布局
         header = new AccountHeaderBuilder()
-                .withActivity(this)
+                .withActivity(MainActivity.this)
                 .withTextColorRes(R.color.header_text)
                 .withHeaderBackground(R.color.colorPrimary)
                 .addProfiles(
@@ -75,16 +75,16 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }),
                         adminProfile.withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                                    @Override
-                                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                                        header.setActiveProfile(1);
-                                        adminProfile
-                                                .withTextColorRes(R.color.white);
-                                        mainProfile
-                                                .withTextColorRes(R.color.black_gray4);
-                                        return true;
-                                    }
-                                })
+                            @Override
+                            public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                                header.setActiveProfile(1);
+                                adminProfile
+                                        .withTextColorRes(R.color.white);
+                                mainProfile
+                                        .withTextColorRes(R.color.black_gray4);
+                                return true;
+                            }
+                        })
                 )
                 .withOnlyMainProfileImageVisible(true)
                 .build();
@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem()
                                 .withIdentifier(0)
                                 .withName(R.string.drawer_item_home)
+                                .withTag(R.string.drawer_item_home)
                                 .withIcon(R.drawable.home)
                                 .withSelectedTextColorRes(R.color.slider_select_textColor)
                                 .withTextColorRes(R.color.slider_textColor)
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                         new SecondaryDrawerItem()
                                 .withIdentifier(2)
                                 .withName(R.string.drawer_item_cjb)
+                                .withTag(R.string.drawer_item_cjb)
                                 .withIcon(R.drawable.tag)
                                 .withSelectedTextColorRes(R.color.slider_select_textColor)
                                 .withTextColorRes(R.color.slider_textColor)
@@ -116,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         new SecondaryDrawerItem()
                                 .withIdentifier(3)
                                 .withName(R.string.drawer_item_ql)
+                                .withTag(R.string.drawer_item_ql)
                                 .withIcon(R.drawable.tag)
                                 .withSelectedTextColorRes(R.color.slider_select_textColor)
                                 .withTextColorRes(R.color.slider_textColor)
@@ -123,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                         new SecondaryDrawerItem()
                                 .withIdentifier(4)
                                 .withName(R.string.drawer_item_cz)
+                                .withTag(R.string.drawer_item_cz)
                                 .withIcon(R.drawable.tag)
                                 .withSelectedTextColorRes(R.color.slider_select_textColor)
                                 .withTextColorRes(R.color.slider_textColor)
@@ -133,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                         new SecondaryDrawerItem()
                                 .withIdentifier(1)
                                 .withName(R.string.drawer_item_settings)
+                                .withTag(R.string.drawer_item_settings)
                                 .withIcon(R.drawable.settings)
                                 .withSelectedTextColorRes(R.color.slider_select_textColor)
                                 .withTextColorRes(R.color.slider_textColor)
@@ -140,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                         new SecondaryDrawerItem()
                                 .withIdentifier(5)
                                 .withName(R.string.drawer_item_about)
+                                .withTag(R.string.drawer_item_about)
                                 .withIcon(R.drawable.about)
                                 .withSelectedTextColorRes(R.color.slider_select_textColor)
                                 .withTextColorRes(R.color.slider_textColor)

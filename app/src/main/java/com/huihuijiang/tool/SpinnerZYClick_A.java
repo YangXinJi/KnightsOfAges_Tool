@@ -1,9 +1,14 @@
 package com.huihuijiang.tool;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
+
+import androidx.lifecycle.ViewModel;
+
+import com.huihuijiang.ui.mainUI.CJBViewModel;
 
 public class SpinnerZYClick_A implements android.widget.AdapterView.OnItemSelectedListener {
     private final Context context;
