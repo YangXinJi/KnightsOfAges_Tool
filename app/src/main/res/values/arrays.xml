@@ -217,4 +217,46 @@
     <string-array name="profession_teShu3">
         <item>大德鲁伊</item><item>主教</item><item>炼金术士</item><item>吟游诗人</item><item>帝国密使</item>
     </string-array>
+    <declare-styleable name="RadarView">
+        <!-- 绘制文本的颜色 -->
+        <attr name="color_text" format="color" />
+        <!-- 绘制正多边形区域的颜色 -->
+        <attr name="color_main_region" format="color" />
+        <!-- 绘制正多边形边框或者圆圈的颜色 -->
+        <attr name="color_main_frame" format="color" />
+        <!-- 绘制数据区域1的颜色 -->
+        <attr name="color_region1" format="color" />
+        <!-- 绘制数据区域1实际边框的颜色 -->
+        <attr name="color_actual_frame1" format="color" />
+        <!-- 绘制数据区域2的颜色 -->
+        <attr name="color_region2" format="color" />
+        <!-- 绘制数据区域2实际边框的颜色 -->
+        <attr name="color_actual_frame2" format="color" />
+        <!-- 绘制数据区域3的颜色 -->
+        <attr name="color_region3" format="color" />
+        <!-- 绘制数据区域3实际边框的颜色 -->
+        <attr name="color_actual_frame3" format="color" />
+        <!-- 绘制数据区域1要不要使用渐变色 -->
+        <attr name="region1_gradient_enable" format="boolean" />
+        <!-- 绘制数据区域1渐变的开始颜色 -->
+        <attr name="color_region1_start" format="color" />
+        <!-- 绘制数据区域1渐变的结束颜色 -->
+        <attr name="color_region1_end" format="color" />
+        <!-- 要不要绘制正多边形区域 -->
+        <attr name="main_region_enable" format="boolean" />
+        <!-- 要不要绘制数据区域1 -->
+        <attr name="region1_enable" format="boolean" />
+        <!-- 要不要绘制数据区域1实际边框 -->
+        <attr name="ractual_frame1_enable" format="boolean" />
+        <!-- 要不要绘制数据区域2 -->
+        <attr name="region2_enable" format="boolean" />
+        <!-- 要不要绘制数据区域2实际边框 -->
+        <attr name="ractual_frame2_enable" format="boolean" />
+        <!-- 要不要绘制数据区域3 -->
+        <attr name="region3_enable" format="boolean" />
+        <!-- 要不要绘制数据区域3实际边框 -->
+        <attr name="ractual_frame3_enable" format="boolean" />
+        <!--文字的大小-->
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
 </resources>

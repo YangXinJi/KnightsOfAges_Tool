@@ -22,7 +22,6 @@ public class SpinnerZYClick_B implements android.widget.AdapterView.OnItemSelect
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         data.setData(spinner.getSelectedItem().toString());
         cjbFragment.setMainData(data.getAll());
-        Log.i("测试", "onItemSelected: "+ Arrays.toString(cjbFragment.getMainData()));
     }
 
     @Override
