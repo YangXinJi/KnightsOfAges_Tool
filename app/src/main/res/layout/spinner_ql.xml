@@ -31,7 +31,8 @@
                             android:id="@+id/et_sx"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="18sp"/>
+                            android:textSize="18sp"
+                            android:inputType="numberDecimal"/>
                 </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 

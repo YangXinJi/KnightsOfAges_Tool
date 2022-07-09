@@ -1,26 +1,21 @@
 package com.huihuijiang.ui.mainUI;
 
-import static android.content.Context.VIBRATOR_SERVICE;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.os.Vibrator;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsoluteLayout;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -34,13 +29,10 @@ import com.huihuijiang.R;
 import com.huihuijiang.databinding.FragmentCjbBinding;
 import com.huihuijiang.tool.GeShi;
 import com.huihuijiang.tool.OnClickListener_Vibrator;
-import com.huihuijiang.tool.RadarData;
 import com.huihuijiang.tool.SpinnerZYClick_A;
 import com.huihuijiang.tool.SpinnerZYClick_B;
 import com.huihuijiang.tool.ViewStyle;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class CJBFragment extends Fragment {
@@ -48,41 +40,40 @@ public class CJBFragment extends Fragment {
     private CJBViewModel viewModel;
     private FragmentCjbBinding binding;
     private ViewStyle viewStyle;
-    private double[] mainData = new double[6];
+    private double[] zyData = new double[]{0,0,0,0,0,0};
     private GeShi geShi;
     private int num_zhiYe;
+    private TextView[] tvs_ql;
 
-    public void setMainData(double[] mainData) {
-        this.mainData = mainData;
+    public void setZyData(double[] mainData) {
+        this.zyData = mainData;
     }
 
-    public double[] getMainData() {
-        return mainData;
+    public double[] getZyData() {
+        return zyData;
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentCjbBinding.inflate(inflater, container, false);
-
         viewModel=new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(CJBViewModel.class);
         viewModel.setContext(getActivity());
-
         viewStyle=new ViewStyle();
         geShi=new GeShi();
-
+        /**
+         *初始化潜力雷达图旁边的textview
+         */
+        tvs_ql=new TextView[]{
+                binding.cardSx.tvLl,
+                binding.cardSx.tvJq,
+                binding.cardSx.tvMj,
+                binding.cardSx.tvTz,
+                binding.cardSx.tvGz,
+                binding.cardSx.tvYz
+        };
         //初始化雷达图
-        List<RadarData> dataList = new ArrayList<>();
-        for (int i = 5; i > 2; i--) {
-            RadarData data = new RadarData(getResources().getStringArray(R.array.liu_wei)[i],0.1*100/1.3);
-            dataList.add(data);
-        }
-        for (int i = 0; i < 3; i++) {
-            RadarData data = new RadarData(getResources().getStringArray(R.array.liu_wei)[i],0.1*100/1.3);
-            dataList.add(data);
-        }
-        binding.cardSx.radarView.radarView.setDataList(dataList);
-        binding.viewRadar1.setData(getResources().getStringArray(R.array.liu_wei),new double[]{0,0,0,0,0,0});
+        binding.cardSx.viewRadar.setData(getResources().getStringArray(R.array.liu_wei), viewModel.getSpinnerDataMutableLiveData());
 
         Thread thread=new Thread(new MyThread());
         thread.setName("初始化view");
@@ -96,28 +87,7 @@ public class CJBFragment extends Fragment {
         for (int i = 0; i < 6; i++) {
             String s= String.valueOf(viewModel.getSpinnerDataMutableLiveData().get(i));
             if (!s.equals("0")){
-                binding.viewRadar1.reFlash(i, Double.parseDouble(s));
-
-                switch (i){
-                    case 0:
-                        binding.cardSx.radarView.radarView.refresh(3,s);
-                        break;
-                    case 1:
-                        binding.cardSx.radarView.radarView.refresh(4,s);
-                        break;
-                    case 2:
-                        binding.cardSx.radarView.radarView.refresh(5,s);
-                        break;
-                    case 3:
-                        binding.cardSx.radarView.radarView.refresh(2,s);
-                        break;
-                    case 4:
-                        binding.cardSx.radarView.radarView.refresh(1,s);
-                        break;
-                    case 5:
-                        binding.cardSx.radarView.radarView.refresh(0,s);
-                        break;
-                }
+                binding.cardSx.viewRadar.reFlash(i, Double.parseDouble(s));
             }
         }
 
@@ -130,6 +100,7 @@ public class CJBFragment extends Fragment {
         return binding.getRoot();
     }
 
+    @SuppressLint("SetTextI18n")
     public class MyThread implements Runnable{
         @Override
         public void run() {
@@ -145,7 +116,43 @@ public class CJBFragment extends Fragment {
             binding.mainZYDJ.zyLevel.setOnItemSelectedListener(new SpinnerZYClick(getActivity(),binding.mainZYDJ.zyLevel,binding.mainZYDJ.zyBingZhong,binding.mainZYDJ.zyZhiYe));
             binding.mainZYDJ.zyBingZhong.setOnItemSelectedListener(new SpinnerZYClick_A(getActivity(),binding.mainZYDJ.zyLevel,binding.mainZYDJ.zyBingZhong,binding.mainZYDJ.zyZhiYe));
             binding.mainZYDJ.zyZhiYe.setOnItemSelectedListener(new SpinnerZYClick_B(binding.mainZYDJ.zyZhiYe));
+            binding.cardSx.spinnerQl.etSx.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                }
 
+                @SuppressLint("SetTextI18n")
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    tvs_ql[binding.cardSx.spinnerQl.sx.getSelectedItemPosition()]
+                            .setText(getResources().getStringArray(R.array.liu_wei)[binding.cardSx.spinnerQl.sx.getSelectedItemPosition()]
+                                    +":"+binding.cardSx.spinnerQl.etSx.getText());
+                    if (!binding.cardSx.spinnerQl.etSx.getText().toString().isEmpty()&&!binding.cardSx.spinnerQl.etSx.getText().toString().equals(".")){
+                        try {
+                            viewModel.setSpinnerDataMutableLiveData(binding.cardSx.spinnerQl.sx.getSelectedItemPosition(), Double.parseDouble(binding.cardSx.spinnerQl.etSx.getText().toString()));
+                            double num=0;
+                            for (int j = 0; j < viewModel.getSpinnerDataMutableLiveData().size(); j++) {
+                                num+=viewModel.getSpinnerDataMutableLiveData().get(j);
+                            }
+                            binding.cardSx.tvZql.setText("总潜力:"+num);
+                        } catch (NumberFormatException e) {
+                            String str="请规范输入";
+                            e.printStackTrace();
+                            tvs_ql[binding.cardSx.spinnerQl.sx.getSelectedItemPosition()]
+                                    .setText(getResources().getStringArray(R.array.liu_wei)[binding.cardSx.spinnerQl.sx.getSelectedItemPosition()]+":"+str);
+                        }
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+            for (int i = 0; i < 6; i++) {
+                tvs_ql[i].setText(getResources().getStringArray(R.array.liu_wei)[i]+":"+viewModel.getSpinnerDataMutableLiveData().get(i));
+            }
+            //等级进度条
             binding.cjbDjSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                 @SuppressLint("MissingPermission")
                 @Override
@@ -163,7 +170,7 @@ public class CJBFragment extends Fragment {
 
                 }
             });
-
+            //添加次级职业按钮
             binding.btnAdd.setOnClickListener(new OnClickListener_Vibrator() {
                 @SuppressLint({"ResourceAsColor", "SetTextI18n"})
                 @Override
@@ -240,71 +247,14 @@ public class CJBFragment extends Fragment {
             if (binding.cardSx.spinnerQl.sx.equals(parent)) {
                 viewModel.setSpinner_position(position);
                 double d=viewModel.getSpinnerDataMutableLiveData().get(position);
-                Log.i("测试", "测试"+d);
-                if (d>1.1){ binding.cardSx.spinnerQl.sxLevel.setSelection(0); }
-                else if (d>0.95){ binding.cardSx.spinnerQl.sxLevel.setSelection(1);}
-                else if (d>0.85){ binding.cardSx.spinnerQl.sxLevel.setSelection(2);}
-                else if (d>0.65){ binding.cardSx.spinnerQl.sxLevel.setSelection(3);}
-                else if (d>0.50){ binding.cardSx.spinnerQl.sxLevel.setSelection(4);}
-                else if (d>0.35){ binding.cardSx.spinnerQl.sxLevel.setSelection(5);}
-                else if (d>0.20){ binding.cardSx.spinnerQl.sxLevel.setSelection(6);}
-                else { binding.cardSx.spinnerQl.sxLevel.setSelection(7);}
+                Log.i("测试", "选择潜力"+d);
                 binding.cardSx.spinnerQl.etSx.setText(String.valueOf(d));
             } else if (binding.cardSx.spinnerQl.sxLevel.equals(parent)) {
+                Log.i("测试", "选择潜力等级");
                 viewModel.setSpinner_sx_position(position);
-                switch (parent.getSelectedItemPosition()){
-                    case 0:
-                        binding.cardSx.spinnerQl.etSx.setText(String.valueOf(1.2));
-                        break;
-                    case 1:
-                        binding.cardSx.spinnerQl.etSx.setText(String.valueOf(1.1));
-                        break;
-                    case 2:
-                        binding.cardSx.spinnerQl.etSx.setText(String.valueOf(0.95));
-                        break;
-                    case 3:
-                        binding.cardSx.spinnerQl.etSx.setText(String.valueOf(0.8));
-                        break;
-                    case 4:
-                        binding.cardSx.spinnerQl.etSx.setText(String.valueOf(0.6));
-                        break;
-                    case 5:
-                        binding.cardSx.spinnerQl.etSx.setText(String.valueOf(0.4));
-                        break;
-                    case 6:
-                        binding.cardSx.spinnerQl.etSx.setText(String.valueOf(0.2));
-                        break;
-                    case 7:
-                        binding.cardSx.spinnerQl.etSx.setText(String.valueOf(0.1));
-                        break;
-                }
+                binding.cardSx.spinnerQl.etSx.setText(getResources().getTextArray(R.array.qianLi_z)[parent.getSelectedItemPosition()]);
                 String s = Objects.requireNonNull(binding.cardSx.spinnerQl.etSx.getText()).toString();
-                switch (binding.cardSx.spinnerQl.sx.getSelectedItemPosition()){
-                    case 0:
-                        binding.cardSx.radarView.radarView.refresh(3,s);
-                        binding.viewRadar1.reFlash(0, Double.parseDouble(s));
-                        break;
-                    case 1:
-                        binding.cardSx.radarView.radarView.refresh(4,s);
-                        binding.viewRadar1.reFlash(1, Double.parseDouble(s));
-                        break;
-                    case 2:
-                        binding.cardSx.radarView.radarView.refresh(5,s);
-                        binding.viewRadar1.reFlash(2, Double.parseDouble(s));
-                        break;
-                    case 3:
-                        binding.cardSx.radarView.radarView.refresh(2,s);
-                        binding.viewRadar1.reFlash(3, Double.parseDouble(s));
-                        break;
-                    case 4:
-                        binding.cardSx.radarView.radarView.refresh(1,s);
-                        binding.viewRadar1.reFlash(4, Double.parseDouble(s));
-                        break;
-                    case 5:
-                        binding.cardSx.radarView.radarView.refresh(0,s);
-                        binding.viewRadar1.reFlash(5, Double.parseDouble(s));
-                        break;
-                }
+                binding.cardSx.viewRadar.reFlash(binding.cardSx.spinnerQl.sx.getSelectedItemPosition(), Double.parseDouble(s));
                 viewModel.setSpinnerDataMutableLiveData(
                         binding.cardSx.spinnerQl.sx.getSelectedItemPosition(),
                         Double.parseDouble(s)
