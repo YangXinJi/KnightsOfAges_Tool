@@ -1,6 +1,7 @@
 package com.huihuijiang.ui
 
 import android.animation.ValueAnimator
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.*
@@ -17,7 +18,7 @@ import kotlin.math.sin
  * 三维图
  * Created by juan on 2021/07/20.
  */
-class RadarView1 : View {
+class RadarView : View {
     /**
      * 字体颜色
      */
@@ -151,6 +152,7 @@ class RadarView1 : View {
     /**
      * 获取自定义属性
      */
+    @SuppressLint("Recycle", "CustomViewStyleable")
     private fun initView(attrs: AttributeSet?) {
         val t = context.obtainStyledAttributes(attrs, R.styleable.RadarView)
         this.mTextColor = t.getColor(R.styleable.RadarView_color_text,mTextColor)
@@ -475,9 +477,9 @@ class RadarView1 : View {
         }
     }
 
-    fun setData(titles: Array<String>, data1: DoubleArray) {
+    fun setData(titles: Array<String>, data1: MutableList<Double>) {
         this.titles = titles
-        this.data1 = data1
+        this.data1 = data1.toDoubleArray()
         count = min(titles.size, data1.size)
         angle = Math.PI / count * 2
         invalidate()

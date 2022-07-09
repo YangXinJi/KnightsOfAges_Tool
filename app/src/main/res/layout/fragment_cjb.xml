@@ -25,24 +25,7 @@
             <include
                 android:id="@+id/card_sx"
                 layout="@layout/card_sx"/>
-            <com.huihuijiang.ui.RadarView1
-                android:id="@+id/view_radar1"
-                android:layout_width="210dp"
-                android:layout_height="210dp"
-                app:color_actual_frame1="#000000"
-                app:color_actual_frame2="#000000"
-                app:color_actual_frame3="#000000"
-                app:color_main_frame="#99000000"
-                app:color_main_region="#000000"
-                app:color_region1="@color/md_amber_700"
-                app:color_region2="@color/md_indigo_700"
-                app:color_region3="@color/md_yellow_500"
-                app:color_text="#000000"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:ractual_frame2_enable="false"
-                app:region2_enable="false" />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -90,7 +73,8 @@
                                     android:id="@+id/cjb_dj_value"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:textSize="18sp"/>
+                                    android:textSize="18sp"
+                                    android:inputType="number" />
                             </com.google.android.material.textfield.TextInputLayout>
                             <SeekBar
                                 android:id="@+id/cjb_dj_seekbar"
@@ -98,7 +82,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="60dp"
                                 android:layout_margin="@dimen/view_margin"
-                                android:max="150"
+                                android:max="60"
                                 android:progress="10" />
                         </LinearLayout>
                         <include
@@ -120,12 +104,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="传家宝等级"
+                android:text="传家宝"
                 android:textSize="20sp"
                 android:layout_margin="@dimen/Title_margin" />
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 app:cardElevation="@dimen/elevation"
                 app:cardCornerRadius="@dimen/radius"
                 app:cardBackgroundColor="@color/card1_bg"
@@ -135,9 +119,56 @@
                 android:padding="@dimen/card_padding">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
-
+                    <androidx.cardview.widget.CardView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:cardElevation="@dimen/elevation"
+                        app:cardCornerRadius="@dimen/radius"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="@color/card_bg">
+                        <TextView
+                            android:id="@+id/tv_cjb1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="第一属性:"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:cardElevation="@dimen/elevation"
+                        app:cardCornerRadius="@dimen/radius"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="@color/card_bg">
+                        <TextView
+                            android:id="@+id/tv_cjb2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="第二属性:"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:cardElevation="@dimen/elevation"
+                        app:cardCornerRadius="@dimen/radius"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="@color/card_bg">
+                        <TextView
+                            android:id="@+id/tv_cjb3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="第三属性:"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"/>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

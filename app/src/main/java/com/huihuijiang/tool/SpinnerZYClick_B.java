@@ -1,13 +1,10 @@
 package com.huihuijiang.tool;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
 import com.huihuijiang.ui.mainUI.CJBFragment;
-
-import java.util.Arrays;
 
 public class SpinnerZYClick_B implements android.widget.AdapterView.OnItemSelectedListener {
     private CJBFragment cjbFragment;
@@ -21,7 +18,7 @@ public class SpinnerZYClick_B implements android.widget.AdapterView.OnItemSelect
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         data.setData(spinner.getSelectedItem().toString());
-        cjbFragment.setMainData(data.getAll());
+        cjbFragment.setZyData(data.getAll());
     }
 
     @Override
